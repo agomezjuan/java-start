@@ -7,36 +7,25 @@ public class Ejercicio1 {
          * <número 2> es igual a <resultado> ”
          */
 
-        String linea;
-
         // Lectura de datos
         System.out.println("Por favor, introduce un número: ");
-        linea = System.console().readLine();
-        int primerNumero;
-        primerNumero = Integer.parseInt(linea);
+        int primerNumero = Integer.parseInt(System.console().readLine());
 
         System.out.println("introduce otro, por favor: ");
-        linea = System.console().readLine();
-        int segundoNumero;
-        segundoNumero = Integer.parseInt(linea);
+        int segundoNumero = Integer.parseInt(System.console().readLine());
 
         // Operaciones
-        int suma;
-        int resta;
-        int multiplicacion;
-        double division;
-
-        suma = primerNumero + segundoNumero;
-        resta = primerNumero - segundoNumero;
-        multiplicacion = primerNumero * segundoNumero;
-        division = (double) primerNumero / (double) segundoNumero;
+        int suma = primerNumero + segundoNumero;
+        int resta = primerNumero - segundoNumero;
+        int multiplicacion = primerNumero * segundoNumero;
+        double division = (double) primerNumero / (double) segundoNumero;
 
         // Salida en pantalla
         System.out.println("La suma de " + primerNumero + " más " + segundoNumero + " es igual a " + suma);
         System.out.println("La resta de " + primerNumero + " menos " + segundoNumero + " es igual a " + resta);
         System.out.println(
                 "La multiplicación de " + primerNumero + " por " + segundoNumero + " es igual a " + multiplicacion);
-        System.out.println("La división de " + primerNumero + " entre " + segundoNumero + " es igual a " + division);
+        System.out.printf("La división de %d entre %d es igual a %.2f\n", primerNumero, segundoNumero, division);
 
     }
 }
